@@ -1,0 +1,46 @@
+<!--pages/order/paySuccess/index.wxml-->
+<!-- 
+  <view class="tabs">
+  <view class="title">
+    <view class="item {{item.isActive?'active':''}}" wx:for="{{tabs}}" wx:key="id" bind:tap="handleItemTap" data-index="{{index}}">{{item.value}}</view>
+  </view>
+  <view class="content">
+    <view class="main">
+      <view class="item" wx:for="{{order}}" wx:key="id">
+        <view class="no_row">
+          <view class="no_text">订单编号：</view>
+          <view class="no_value">{{item.orderNo}}</view>
+        </view>
+        <view class="price_row">
+          <view class="price_text">订单价格：</view>
+          <view class="price_value">￥{{item.totalPrice}}</view>
+        </view>
+        <view class="row">
+          <view class="text">订单日期：</view>
+          <view class="value">{{item.createTime}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+ -->
+
+<Tabs tabs="{{tabs}}" bind:tabsItemChange="handleTabsItemChange">
+  <view class="main">
+    <view class="item" wx:for="{{order}}" wx:key="id">
+      <view class="no_row">
+        <view class="no_text">订单编号：</view>
+        <view class="no_value">{{item.orderNo}}</view>
+      </view>
+      <view class="price_row">
+        <view class="price_text">订单价格：</view>
+        <view class="price_value">￥{{item.totalPrice}}</view>
+      </view>
+      <view class="row">
+        <view class="text">订单日期：</view>
+        <view class="value">{{item.createTime}}</view>
+      </view>
+    </view>
+  </view>
+
+</Tabs>

@@ -1,0 +1,62 @@
+/* pages/goods/category/index.wxss */
+.cates {
+  height: 100%;
+}
+.cates .cates_container {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.cates .cates_container .left_menu {
+  flex: 1;
+}
+.cates .cates_container .left_menu .menu_item {
+  margin-top: 10rpx;
+  width: 150rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cates .cates_container .left_menu .active {
+  font-weight: bolder;
+  color: var(--themeColor);
+  border-left: 8rpx solid currentColor;
+}
+.cates .cates_container .right_content {
+  flex: 4;
+}
+.cates .cates_container .right_content .prodictType {
+  padding: 30rpx 20rpx;
+}
+.cates .cates_container .right_content .prodictType .productType_title {
+  font-weight: bolder;
+}
+.cates .cates_container .right_content .prodictType .productType navigator {
+  display: flex;
+  margin: 10rpx;
+  background-color: #f8f8f8;
+  justify-content: center;
+  align-items: center;
+}
+.cates .cates_container .right_content .prodictType .productType navigator image {
+  flex: 1;
+}
+.cates .cates_container .right_content .prodictType .productType navigator .right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20rpx;
+}
+.cates .cates_container .right_content .prodictType .productType navigator .right .goodsName {
+  padding-top: 10rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cates .cates_container .right_content .prodictType .productType navigator .right .goodsPrice {
+  padding-bottom: 10rpx;
+}

@@ -1,0 +1,18 @@
+#spring的全局设置
+spring:
+  #MySQL的设置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mall
+    username: root
+    password: 123456
+  jackson:
+    default-property-inclusion: non_null
+    time-zone: GMT+8
+    date-format: yyy-MM-dd hh:mm:ss
+
+#mybatis的全局设置
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰映射
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #SQL日志

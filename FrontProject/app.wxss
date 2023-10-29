@@ -1,0 +1,24 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+/*
+全局样式
+*/
+page {
+  /*颜色*/
+  --themeColor: #ff5700;
+  /*字体大小*/
+  font-size: 35rpx;
+}
+
+image {
+  width: 100%;
+}

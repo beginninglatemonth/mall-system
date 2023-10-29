@@ -1,0 +1,251 @@
+/* github.com/necolas/normalize.css */
+
+
+/* 通用样式重置 */
+ /* div的默认样式不存在padding和margin为0的情况*/
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed, 
+ figure, figcaption, footer, header, hgroup, 
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+ }
+
+/* HTML5 元素的默认样式 */
+ article, aside, details, figcaption, figure, 
+ footer, header, hgroup, menu, nav, section {
+   display: block;
+ }
+
+ /* 标签样式重置 */
+ html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+/* 设置通用文本样式 */
+  body {
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: 'Microsoft YaHei';
+    font-size: 15px;
+  }
+  
+/* 让 main 元素在 IE 中显示正确 */
+  main {
+    display: block;
+  }
+  
+/* 修复 h1 元素在一些浏览器中的字体大小和外边距问题 */
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+ }
+
+ /* 去除水平线 hr 默认样式，显示边框 */
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+ /* 设置预格式化文本的字体样式 */
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+/* 去除链接的下划线并设置为透明背景 */
+  a {
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  
+ /* 修复 abbr 标签在不同浏览器中的下划线问题 */
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  
+/* 设置粗体文本的字体权重 */
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+/* 设置代码、键盘和样本元素的字体样式 */
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+/* 设置小号字体大小 */
+  small {
+    font-size: 80%;
+  }
+  
+/* 修复 sub 和 sup 对行高的影响 */
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  /* 调整 sub 和 sup 的垂直对齐 */
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+
+/* 去除图片链接的边框 */
+  img {
+    display: block;
+    border-style: none;
+  }
+  
+/* 修复表单元素的默认样式 */  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0; 
+  }
+  
+/* 显示 IE 中的溢出内容 */
+  button,
+  input { /* 1 */
+    overflow: visible;
+  }
+  
+/* 修复按钮和选择框的文本转换样式 */
+  button,
+  select { /* 1 */
+    text-transform: none;
+  }
+  
+/* 修复 iOS 和 Safari 中可点击元素的样式问题 */
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+  
+/* 去除 Firefox 中按钮的内边框和内边距 */
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+/* 恢复前一个规则中取消的焦点样式 */
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+/* 修复 fieldset 的内边距 */
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  
+/* 修复 legend 标签在各浏览器中的表现问题 */
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  
+/* 修复 progress 元素在各浏览器中的垂直对齐问题 */
+  progress {
+    vertical-align: baseline;
+  }
+  
+ /* 修复 textarea 在 IE 中的默认样式问题 */
+  textarea {
+    overflow: auto;
+  }
+
+/* 修复复选框和单选框的默认样式 */
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+  
+/* 修复 Chrome 中数字输入框的奇怪样式问题 */
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+/* 修复搜索框在各浏览器中的样式问题 */
+  [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+  
+/* 修复 Chrome 和 Safari 中搜索框的内边距问题 */
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  
+/* 修复 iOS 和 Safari 中可上传文件的样式问题 */
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+  
+/* 修复详情和摘要元素的默认显示方式问题 */
+  details {
+    display: block;
+  }
+  
+  summary {
+    display: list-item;
+  }
+/* 隐藏 template 元素 */
+  template {
+    display: none;
+  }
+  
+/* 隐藏 hidden 元素 */
+  [hidden] {
+    display: none;
+  }
+  
+/* 移除 ul 和 li 默认样式 */
+  ul, li { list-style: none; }

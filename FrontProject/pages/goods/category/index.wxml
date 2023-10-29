@@ -1,0 +1,37 @@
+<!--pages/goods/category/index.wxml-->
+
+<view class="cates">
+
+  <view class="cates_container">
+<!-- 左侧分类菜单 -->
+    <scroll-view class="left_menu" scroll-y="true">
+      <view class="menu_item {{index == currentIndex ? 'active' : ''}}" wx:for="{{mainTypeList}}" wx:key="*this" data-index="{{index}}" bindtap="handleMenuItemChange">
+        {{item}}
+      </view>
+    </scroll-view>
+     <!-- 右侧商品列表 -->
+    <scroll-view class="right_content" scroll-y="true" scroll-top="{{scrollTop}}">
+     <!-- 遍历二级分类和商品列表 -->
+      <view class="prodictType" wx:for="{{secondaryTypeList}}" wx:for-item="secondaryType" wx:key="id">
+         <view class="productType_title">
+          {{secondaryType.name}}
+        </view>
+         <!-- 遍历商品列表 -->
+        <view class="productType" wx:for="{{secondaryType.goodsList}}" wx:for-item="goods" wx:key="id">
+        <!-- 商品链接，点击跳转至详情页 -->
+          <navigator url="/pages/goods/detail/index?id={{goods.id}}">
+            <image src="{{baseUrl+goods.image}}" mode="widthFix" />
+            <view class="right">
+              <view class="goodsName">{{goods.name}}</view>
+              <view class="goodsPrice">￥{{goods.price}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+
+
+    </scroll-view>
+
+    <!--  -->
+  </view>
+</view>

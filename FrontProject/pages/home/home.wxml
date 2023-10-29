@@ -1,0 +1,48 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+  <SearchBar></SearchBar>
+  <!-- 轮播图 -->
+  <view class="index_swiper">
+    <swiper indicator-dots="true" autoplay="true" circular="true">
+      <swiper-item wx:for="{{swiperList}}" wx:for-item="swiper" wx:key="id">
+        <navigator url="/pages/goods/detail/index?id={{swiper.id}}">
+          <image src="{{baseUrl+swiper.carouselImages}}" mode="widthFix" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 分类 -->
+  <view class="index_mainType">
+    <view class="maintypeRow">
+      <navigator url="" bindtap="handleTypeJump" data-index="{{index}}" wx:for="{{mainTypeList1}}" wx:for-item="mainType" wx:key="id">
+        <image src="{{baseUrl+mainType.image}}" mode="widthFix" />
+        <text>{{mainType.name}}</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 分类 -->
+  <view class="index_mainType">
+    <view class="maintypeRow">
+      <navigator url="" bindtap="handleTypeJump" data-index="{{index+5}}" wx:for="{{mainTypeList2}}" wx:for-item="mainType" wx:key="id">
+        <image src="{{baseUrl+mainType.image}}" mode="widthFix" />
+        <text>{{mainType.name}}</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 热卖推荐 -->
+  <view class="index_goodsTop">
+    <view class="goodsTopTitle">热卖推荐</view>
+    <view class="goodsTopList">
+      <view class="goodsTopDetail" wx:for="{{goodsTopList}}" wx:for-item="goodsTop" wx:key="id">
+        <navigator url="/pages/goods/detail/index?id={{goodsTop.id}}">
+          <image src="{{baseUrl+goodsTop.image}}" mode="widthFix" />
+          <view class="goodsTopName">{{goodsTop.name}}</view>
+          <view class="goodsTopPrice">￥{{goodsTop.price}}</view>
+          <button type="warn" size="mini">立即购买</button>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!--  -->
+</view>

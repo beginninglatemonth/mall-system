@@ -1,0 +1,50 @@
+<!--pages/usercenter/index.wxml-->
+
+<view class="user_info">
+  <!-- 用户背景 -->
+  <view class="user_bg">
+    <view class="wrap">
+      <image src="{{userInfo.avatarUrl}}" mode="widthFix" />
+      <view class="name">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <!--  -->
+  <view class="menu">
+    <!-- 订单管理 -->
+    <view class="order_wrap">
+      <view class="title"></view>
+      <view class="content">
+        <navigator url="/pages/order/paySuccess/index?type=1">
+          <view class="iconfont"></view>
+          <view class="name">待付款</view>
+        </navigator>
+        <navigator url="/pages/order/paySuccess/index?type=2">
+          <view class="iconfont"></view>
+          <view class="name">待收货</view>
+        </navigator>
+
+        <navigator url="/pages/order/paySuccess/index?type=3">
+          <view class="iconfont"></view>
+          <view class="name">退款/退货</view>
+        </navigator>
+        <navigator url="/pages/order/paySuccess/index?type=0">
+          <view class="iconfont"></view>
+          <view class="name">全部订单</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 收货地址 -->
+    <view class="address_wrap" bind:tap="handleEditAddress"> 收货地址管理</view>
+    <!-- 应用 -->
+    <view class="app_wrap">
+      <view class="item contact">
+        <text>联系客服</text>
+        <text>123456</text>
+      </view>
+      <view class="item">
+        <button open-type="feedback" class="feedback">意见反馈</button>
+      </view>
+      <view class="item">关于我们</view>
+    </view>
+  </view>
+</view>
