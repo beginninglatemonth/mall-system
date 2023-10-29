@@ -1,0 +1,98 @@
+page {
+  padding-bottom: 70rpx;
+}
+.recevie_address_row {
+  border-bottom: 1px dotted gray;
+  padding: 20rpx;
+}
+.recevie_address_row .user_info_row {
+  padding: 20rpx;
+  margin-top: 10rpx;
+}
+.recevie_address_row .user_info_row .user_info {
+  margin-top: 10rpx;
+}
+.recevie_address_row .user_info_row .detailInfo {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 10rpx;
+}
+.content {
+  background-color: #f5f5f5;
+}
+.content .main {
+  padding: 2rpx 10rpx 10rpx 10rpx;
+}
+.content .main .item {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20rpx;
+  padding-right: 20rpx;
+}
+.content .main .item .img {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  margin: 20rpx;
+  border-radius: 10px;
+}
+.content .main .item .img image {
+  width: 80%;
+}
+.content .main .item .info_wrap {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.content .main .item .info_wrap .name {
+  font-weight: bolder;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.content .main .item .info_wrap .goods_price_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.content .main .item .info_wrap .goods_price_wrap .price {
+  color: var(--themeColor);
+  font-size: 34rpx;
+}
+.footer_tool {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  border-top: #ccc;
+}
+.footer_tool .total_price_wrap {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_tool .total_price_wrap .total_price .total_price_text {
+  color: var(--themeColor);
+  font-weight: bolder;
+  font-size: 34rpx;
+}
+.footer_tool .order_pay_wrap {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(90deg, #ff740b, #fe6227);
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 10rpx;
+}

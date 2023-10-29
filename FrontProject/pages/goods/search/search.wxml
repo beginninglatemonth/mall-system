@@ -1,0 +1,14 @@
+<!--pages/goods/search/search.wxml-->
+
+<!-- 搜索 -->
+<view class="row">
+  <input type="text" model:value="{{inputValue}}" placeholder="请输入商品关键字" bindinput="handleInput" />
+  <button hidden="{{!isFocus}}" bind:tap="handlePurge">清除</button>
+
+</view>
+<view class="content">
+  <navigator class="item" wx:for="{{goodsList}}" wx:key="id" url="/pages/goods/detail/index?id={{item.id}}">
+    {{item.name}}
+  </navigator>
+
+</view>

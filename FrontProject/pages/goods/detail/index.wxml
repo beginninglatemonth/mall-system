@@ -1,0 +1,54 @@
+<!--pages/goods/detail/index.wxml-->
+
+<!-- 轮播图 -->
+<view class="detail_swiper">
+  <swiper indicator-dots="true" autoplay="true" circular="true">
+    <swiper-item wx:for="{{productObj.goodsCarouselImages}}" wx:for-item="swiper" wx:key="id">
+      <navigator url="">
+        <image src="{{baseUrl+swiper.image}}" mode="widthFix" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 价格 -->
+<view class="price">￥{{productObj.price}}</view>
+<!-- 名称 -->
+<view class="name">{{productObj.name}}</view>
+<!-- 描述 -->
+<view class="descripion">{{productObj.description}}</view>
+
+<!-- 商品介绍与规格参数 -->
+<view class="desc_tabs">
+  <view class="tabs_title">
+    <view class="title_item {{activeIndex==0?'active':''}}" data-index="0" bindtap="handleItemTap">商品介绍</view>
+    <view class="title_item {{activeIndex==1?'active':''}}" data-index="1" bindtap="handleItemTap">规格参数</view>
+  </view>
+  <view class="tabs_content" >
+    <block wx:if="{{activeIndex==0}}">
+      <rich-text nodes="{{productObj.introductory}}"></rich-text>
+      <!-- <image style="width: 100%;" src="{{baseUrl+productObj.introductory}}" mode="widthFix" wx:if="{{productObj.introductory!=null}}" /> -->
+      </block>
+    <block wx:if="{{activeIndex==1}}">
+      <rich-text nodes="{{productObj.specifications}}"></rich-text>
+      <!-- <image style="width: 100%;" src="{{baseUrl+productObj.specifications}}" mode="widthFix" wx:if="{{productObj.specifications!=null}}" /> -->
+    </block>
+
+  </view>
+</view>
+
+<!-- 底部菜单 -->
+<view class="tool">
+  <navigator class="tool_item" url="/pages/home/home" open-type="switchTab">
+    <view class="iconfont"></view>
+    首页
+  </navigator>
+  <view class="tool_item">
+    <view class="iconfont"></view>
+    <view> 客服 </view>
+    <button open-type="contact"></button>
+  </view>
+  <navigator class="tool_item" url="/pages/order/shoppingCart/index" open-type="switchTab">购物车</navigator>
+  <view class=" btn_cart" bindtap="handleOrderAdd">加入购物车</view>
+  <view class=" btn_buy" bindtap="handleBuy">购买</view>
+</view>

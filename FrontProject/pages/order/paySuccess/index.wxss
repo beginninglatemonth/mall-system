@@ -1,0 +1,26 @@
+/* pages/order/paySuccess/index.wxss */
+
+ .main .item {
+  padding: 20rpx ;
+  border-bottom: 1rpx solid #ccc;
+  color: #666;
+}
+ .main .item .no_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+ .main .item .price_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+ .main .item .price_row .price_value {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}
+.main .item .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
